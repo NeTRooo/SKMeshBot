@@ -1,0 +1,9 @@
+services:
+  pingbot:
+    build: .
+    restart: unless-stopped
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    environment:
+      SERIAL_PORT: /dev/ttyACM0
+      CHANNEL_IDX: 1
